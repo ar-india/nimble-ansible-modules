@@ -526,6 +526,7 @@ try:
     from nimbleclient.v1 import client
 except ImportError:
     client = None
+from ansible_collections.hpe.nimble.plugins.module_utils.hpe_nimble import __version__ as NIMBLE_ANSIBLE_VERSION
 import ansible_collections.hpe.nimble.plugins.module_utils.hpe_nimble as utils
 import re
 
@@ -1003,7 +1004,8 @@ def main():
         client_obj = client.NimOSClient(
             hostname,
             username,
-            password
+            password,
+            f"Ansible Modules v{NIMBLE_ANSIBLE_VERSION}"
         )
 
         return_status, changed, msg, result_dict = get_subset_info(client_obj, gather_subset)
