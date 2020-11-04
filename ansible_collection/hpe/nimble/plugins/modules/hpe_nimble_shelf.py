@@ -209,7 +209,7 @@ def main():
             hostname,
             username,
             password,
-            f"Ansible Modules v{NIMBLE_ANSIBLE_VERSION}"
+            f"HPE Nimble Ansible Modules v{NIMBLE_ANSIBLE_VERSION}"
         )
 
         # States

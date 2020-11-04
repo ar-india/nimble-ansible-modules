@@ -1005,7 +1005,7 @@ def main():
             hostname,
             username,
             password,
-            f"Ansible Modules v{NIMBLE_ANSIBLE_VERSION}"
+            f"HPE Nimble Ansible Modules v{NIMBLE_ANSIBLE_VERSION}"
         )
 
         return_status, changed, msg, result_dict = get_subset_info(client_obj, gather_subset)
